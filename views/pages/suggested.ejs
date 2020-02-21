@@ -3,22 +3,16 @@
 <div class="mainPage">
 
     <div class="coverImg">
+        <h1> Add someone you may know by clicking on their profile!</h1>
         <img class="userImg" src="<%= user.avatarUrl %>">
     </div>
     <div class="userFriends">
-
-
-        <!-- Leaving this form will render the /allfriends on the url endpoint. -->
-        <form method='get' action='/allfriends' class='signin-form'>
-            <button type='submit'>Suggested Friends</button>
-        </form>
         <!-- ----------- -->
         <% friends.forEach(friend => { %>
             <a href="/user/<%=friend.id %>">
                 <img class="friendImage" src="<%= friend.avatarUrl %> ">
             </a>
             <!-- -------- -->
-
        <% }); %> 
      
 
