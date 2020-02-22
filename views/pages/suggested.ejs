@@ -7,28 +7,31 @@
     <div class="coverImg">
         <img class="userImg" src="<%= user.avatarUrl %>">
     </div>
-    <div class="userFriends">
 
-        <div class="lookFriends">
+    <div class="lookFriends">
             Looking for some new friends?
             <h6>Click To Add</h6>
-            <i class="fas fa-user-friends"></i>
+    </div>
 
-
-        </div>
         <!-- ----------- -->
+
+    
         <% friends.forEach(friend => { %>
-        <a class="suggestedImg" href="/user/add/<%=friend.id %>">
-            <img class="friendsImg" src="<%= friend.avatarUrl %> ">
-        </a>
+    <span class="eachImg"><%= friend.name %>
+     </span>
+
+    <a class="suggestedImg" href="/user/add/<%=friend.id %>">
+        <img class="friendsImg" src="<%= friend.avatarUrl %> ">
+    </a>
+
         <!-- -------- -->
 
         <% }); %>
 
 
-    </div>
+  
 
-</div>
+
 
 
 
