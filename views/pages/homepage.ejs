@@ -1,22 +1,26 @@
 <%- include('../partials/header',{}) %>
+<%- include('../partials/navBar',{}) %>
+
 
 <div class="mainPage">
 
     <div class="coverImg">
         <img class="userImg" src="<%= user.avatarUrl %>">
     </div>
-    <div class="userFriends">
+    <div class="Friends">
 
 
         <!-- Leaving this form will render the /allfriends on the url endpoint. -->
         <form method='get' action='/allfriends' class='signin-form'>
-            <button type='submit'>Suggested Friends</button>
+            <button class="btn" type='submit'>Suggested Friends</button>
         </form>
         <!-- ----------- -->
         <% friends.forEach(friend => { %>
+        <div class="image">
             <a href="/user/<%=friend.id %>">
                 <img class="friendImage" src="<%= friend.avatarUrl %> ">
             </a>
+        </div>
             <!-- -------- -->
 
        <% }); %> 

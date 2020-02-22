@@ -1,20 +1,30 @@
 <%- include('../partials/header',{}) %>
+<%- include('../partials/navBar',{}) %>
+
 
 <div class="mainPage">
 
     <div class="coverImg">
-        <h1> Add someone you may know by clicking on their profile!</h1>
         <img class="userImg" src="<%= user.avatarUrl %>">
     </div>
     <div class="userFriends">
+
+        <div class="lookFriends">
+            Looking for some new friends?
+            <h6>Click To Add</h6>
+            <i class="fas fa-user-friends"></i>
+
+
+        </div>
         <!-- ----------- -->
         <% friends.forEach(friend => { %>
-            <a href="/user/<%=friend.id %>">
-                <img class="friendImage" src="<%= friend.avatarUrl %> ">
-            </a>
-            <!-- -------- -->
-       <% }); %> 
-     
+        <a class="suggestedImg" href="/user/add/<%=friend.id %>">
+            <img class="friendsImg" src="<%= friend.avatarUrl %> ">
+        </a>
+        <!-- -------- -->
+
+        <% }); %>
+
 
     </div>
 

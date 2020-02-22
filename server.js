@@ -101,6 +101,33 @@ const handleallFriends = (req, res) => {
 
     })
 }
+const handleAdd = (req,res) => {
+    let addfriendId = req.params.id;
+    let friendsHolder = [];
+
+    //store new user id into the currentUSer object. 
+    let userAdded = currentUser;
+    //Now the current user will hold 4 friend IDS. 
+    userAdded.friends.push(addfriendId);
+
+    userAdded.friends.forEach(friend => {
+        users.forEach(user => {
+            if (friend === user.id) {
+                friendsHolder.push(user);
+            }
+        })
+    });
+
+
+
+    res.render('pages/homepage', {
+        user: currentUser,
+        title: "Homepage",
+        friends: friendsHolder
+    }) 
+
+
+}
 // -----------------------------------------------------
 // server endpoints
 express()
@@ -112,12 +139,14 @@ express()
     .set('view engine', 'ejs')
     // endpoints
     .get('/', handleHome)
+    
     .get('/signinPage', handleSignin)
     .get('/user/:id', handleUser)
     // .get('/user/user/:id', handleUser)
     .get('/getname', handleName)
     //
     .get('/allfriends', handleallFriends)
+    .get('/user/add/:id', handleAdd)
 
 
     .get('*', (req, res) => {

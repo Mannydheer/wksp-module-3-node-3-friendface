@@ -87,7 +87,8 @@ body {
   background: #fafafa;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%); }
 
 .main {
   flex: 1 0 auto; }
@@ -96,7 +97,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins';
     color: slategray; }
     .main.four-oh-four .title {
       font-size: 96px; }
@@ -123,3 +124,100 @@ body {
     flex-direction: row;
     justify-content: space-between;
     min-height: 500px; } }
+
+.friendFace {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 150px; }
+
+.friendLogo {
+  background-color: #0f7b47; }
+
+.handshake {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.mainForm {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  border: solid black 2px;
+  padding: 40px;
+  font-size: 30px;
+  background-color: white;
+  transition: ease 1s all;
+  font-style: italic; }
+
+.mainForm:hover {
+  background-color: green; }
+
+.coverImg {
+  background-color: #0f7b47; }
+
+.userImg {
+  border-radius: 50%;
+  height: 150px; }
+
+.friendImage {
+  border-radius: 50%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-top: 70px; }
+
+.btn {
+  position: absolute;
+  bottom: 20%;
+  display: block;
+  margin-left: 38%;
+  font-size: 30px;
+  background-color: white;
+  transition: all ease 1s; }
+
+.btn:hover {
+  background-color: #0f7b47; }
+
+header {
+  display: none; }
+
+.navBar {
+  background-color: #0f7b47;
+  position: absolute;
+  top: auto;
+  right: 28%;
+  margin-top: 40px; }
+
+.home {
+  font-size: 35px;
+  text-decoration: none;
+  color: white;
+  background-color: #0f7b47;
+  transition: ease-in-out 0.2s all;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: 'Poppins'; }
+
+.home:hover {
+  text-decoration: underline; }
+
+.friendsImg {
+  width: 33%;
+  border-radius: 30%;
+  height: 500px; }
+
+.Friends {
+  display: flex; }
+
+.lookFriends {
+  font-size: 40px;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins'; }
